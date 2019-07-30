@@ -43,6 +43,7 @@ def GenerateConfig(context):
               'nodeConfig': {
                   'machineType': context.properties['machineType'],
                   'preemptible': context.properties['preemptible'],
+                  'tags': context.properties['tags'],
                   'oauthScopes': [
                       'https://www.googleapis.com/auth/' + s for s in [
                           'compute', 'devstorage.read_only', 'logging.write',

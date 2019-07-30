@@ -56,6 +56,9 @@ properties:
     type: string
     description: The machine type to use for cluster nodes.
     default: n1-standard-1
+  tags:
+    type: array
+    description: array of tags added to the nodes
   preemptible:
     type: boolean
     description: Whether or not to use preemptible VMs for the cluster.

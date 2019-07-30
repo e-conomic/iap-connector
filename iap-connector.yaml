@@ -21,6 +21,8 @@ resources:
   properties:
     zone: europe-west4-a
     serviceAccountName: 982583111345@cloudservices.gserviceaccount.com
+    tags:
+      - economic-default
     routing:
      - name: production-logstash
        mapping:
