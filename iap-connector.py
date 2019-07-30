@@ -32,7 +32,7 @@ def GenerateConfig(context):
       'name': cluster_name,
       'type': 'container.v1.cluster',
       'properties': {
-          'zone': context.properties['zone'],
+          'locations': context.properties['locations'],
           'cluster': {
               'name':
                   cluster_name,

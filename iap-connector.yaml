@@ -19,23 +19,22 @@ resources:
 - name: iap-connector
   type: iap-connector.py
   properties:
-    zone: <ZONE>
-    serviceAccountName: <PROJECT_NUMBER>@cloudservices.gserviceaccount.com
+    locations: 
+      - europe-west4-a
+      - europe-west4-b
+      - europe-west4-c
+    serviceAccountName: 982583111345@cloudservices.gserviceaccount.com
     routing:
-     - name: hr
+     - name: production-logstash
        mapping:
         - name: host
-          source: www.hr-domain.com
-          destination: hr-internal.domain.com
-        - name: sub
-          source: sheets.hr-domain.com
-          destination: sheets.hr-internal.domain.com
-     - name: finance
+          source: logstash.e-conomic.net
+          destination: logstashkibanahttpsexternal-743514834.eu-west-1.elb.amazonaws.com
+     - name: staging-logstash
        mapping:
         - name: host
-          source: www.finance-domain.com
-          destination: finance-internal.domain.com
+          source: staginglogstash.e-conomic.net
+          destination: logstashkibanastaginghttps-916866446.eu-west-1.elb.amazonaws.com
     tls:
-     - cert1
-     - cert2
+     - cloudflareorigindotnet
 

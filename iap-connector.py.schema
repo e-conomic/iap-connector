@@ -20,15 +20,15 @@ info:
     traffic to each service for routing.
 
 required:
-- zone
+- locations
 - serviceAccountName
 - routing
 - tls
 
 properties:
-  zone:
-    type: string
-    description: Zone in which the cluster should run.
+  locations:
+    type: array
+    description: Zones in which the cluster should run.
   initialNodeCount:
     type: integer
     description: Initial number of nodes desired in the cluster.
