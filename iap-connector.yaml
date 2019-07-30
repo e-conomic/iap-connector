@@ -28,11 +28,11 @@ resources:
        mapping:
         - name: host
           source: logstash.e-conomic.net
-          destination: logstashkibanahttpsexternal-743514834.eu-west-1.elb.amazonaws.com
+          destination: logstash-iap.e-conomic.net
      - name: staging-logstash
        mapping:
         - name: host
-          source: 123test123.e-conomic.net
-          destination: logstashkibanastaginghttps-916866446.eu-west-1.elb.amazonaws.com
+          source: staginglogstash.e-conomic.net
+          destination: staginglogstash-iap.e-conomic.net
     tls:
      - cloudflareorigindotnet
